@@ -15,4 +15,68 @@
       </label>
     </div>
   </div>
+
+  <div class="row">
+    <div class="form-group col">
+      <label>Payment Date: </label>
+      <input type="date" (input)="onDateChange($event)" class="form-control" />
+    </div>
+
+    <div class="col">
+      <label>
+        <b>Payment Date</b>
+        <div>
+          {{ payment_date | date: "MMMM d, y" }}
+        </div>
+      </label>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group col">
+      <label>Payment Amount: </label>
+      <input (input)="onAmountChange($event)" class="form-control" />
+    </div>
+
+    <div class="col">
+      <label>
+        <b>Payment Amount</b>
+        <div>
+          {{ amount | currency: "USD" }}
+        </div>
+      </label>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group col">
+      <label>Height: </label>
+      <input (input)="onHeightChange($event)" class="form-control" />
+    </div>
+
+    <div class="col">
+      <label>
+        <b>Height</b>
+        <div>
+          {{ height | number: "6.1-3" }}
+        </div>
+      </label>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group col">
+      <label>Miles: </label>
+      <input (input)="onMilesChange($event)" class="form-control" />
+    </div>
+
+    <div class="col">
+      <label>
+        <b>Kilometers</b>
+        <div>
+          {{ miles | convert }}
+        </div>
+      </label>
+    </div>
+  </div>
 </div>

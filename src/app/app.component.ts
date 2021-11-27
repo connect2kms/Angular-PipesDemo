@@ -7,13 +7,34 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   name: string = '';
-  date: string = '';
+  payment_date: string = '';
+  amount: number = 0;
+  height: number = 0;
+  miles: number = 0;
+
+  car = {
+    make: 'Toyoto',
+    model: 'Camry',
+    year: 2021,
+  };
 
   onNameChange(event: Event) {
     this.name = (event.target as HTMLInputElement).value;
   }
 
   onDateChange(event: Event) {
-    this.date = (event.target as HTMLInputElement).value;
+    this.payment_date = (event.target as HTMLInputElement).value;
+  }
+
+  onAmountChange(event: Event) {
+    this.amount = parseFloat((event.target as HTMLInputElement).value);
+  }
+
+  onHeightChange(event: Event) {
+    this.height = parseFloat((event.target as HTMLInputElement).value);
+  }
+
+  onMilesChange(event: Event) {
+    this.miles = parseFloat((event.target as HTMLInputElement).value);
   }
 }
