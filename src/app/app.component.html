@@ -1,0 +1,18 @@
+<div class="containter">
+  <h3>Payment Form</h3>
+  <div class="row">
+    <div class="form-group col">
+      <label>Payee Name: </label>
+      <input (input)="onNameChange($event)" class="form-control" />
+    </div>
+
+    <div class="col">
+      <label>
+        <b>Name</b>
+        <div>
+          {{ name | titlecase }}
+        </div>
+      </label>
+    </div>
+  </div>
+</div>
